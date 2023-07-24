@@ -1,0 +1,27 @@
+package Basics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class UsageOfFindElement {
+	public static void main(String[] args) throws Throwable {
+	WebDriver driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.get("https://integrator.actitime.com/auth/at");
+	WebElement usernameTextField = driver.findElement(By.name("username"));
+	usernameTextField.sendKeys("Aishwarya");
+	WebElement passwordTextField=driver.findElement(By.name("password"));
+	passwordTextField.sendKeys("Manjunath");
+	Thread.sleep(5000);
+	driver.manage().window().minimize();
+	driver.quit();
+	
+	
+	
+	
+	
+	}
+
+}
